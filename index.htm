@@ -9,15 +9,12 @@
 <script src="expandAllSubmenus.js"></script>
 <script src="ActiveLink.js"></script>
     <script>
-        $(function(){
-        $('a').each(function(){
-            if ($(this).prop('href') == window.location.href) {   
-                $(this).children('span').addClass('active');
-                $(this).addClass('active');
-                $(this).panrent('li').addClass('active');   
-            }
-        });
-    });
+        $(function() { 
+        var url = window.location;
+        $('ul.nav a').filter(function() {
+            return this.href == url;
+        }).parent().parent().parent().addClass('active');
+    }); 
     </script>
 
 </head>
