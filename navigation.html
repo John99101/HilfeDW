@@ -6,6 +6,17 @@
 <script src="expandAllSubmenus.js"></script>
 <script src="ActiveLink.js"></script>
 
+<script>
+  var active = 0;
+  for (var i = 0; i < document.links.length; i++) {
+    if (document.links[i].href === document.URL) {
+        active = i;
+      }
+  }
+  document.links[active].className = 'active';
+</script>  
+
+  
 
 </HEAD>
 <body>
