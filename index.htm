@@ -11,11 +11,13 @@
     <script>
         $(function(){
         $('a').each(function(){
-            if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('active'); 
+            if ($(this).prop('href') == window.location.href) {   
+                $(this).children('span').addClass('active');
+                $(this).addClass('active');
+                $(this).panrent('li').addClass('active');   
             }
-            });
         });
+    });
     </script>
 
 </head>
