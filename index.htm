@@ -8,6 +8,15 @@
 <script src="navigation.js"></script>
 <script src="expandAllSubmenus.js"></script>
 <script src="ActiveLink.js"></script>
+    <script>
+        $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); 
+            }
+            });
+        });
+    </script>
 
 </head>
 
