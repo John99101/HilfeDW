@@ -5,16 +5,16 @@
 <script src="/navigation.js"></script>
 <script src="expandAllSubmenus.js"></script>
 <script src="ActiveLink.js"></script>
-
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script>
-  var active = 0;
-  for (var i = 0; i < document.links.length; i++) {
-    if (document.links[i].href === document.URL) {
-        active = i;
-      }
-  }
-  document.links[active].className = 'active';
-</script>  
+$(function(){
+  $('a').each(function() {
+    if ($(this).prop('href') == window.location.href) {
+      $(this).addClass('current');
+    }
+  });
+});
+</script> 
 
   
 
